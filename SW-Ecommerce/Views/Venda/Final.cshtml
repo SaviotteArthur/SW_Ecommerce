@@ -1,0 +1,61 @@
+﻿@model IEnumerable<SW_Ecommerce.Models.VendaFinal>
+
+@{
+    ViewBag.Title = "Final";
+}
+
+<h2>Finalizar compra</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Id Venda
+        </th>
+        <th>
+            Nome Produto
+        </th>
+        <th>
+            Quantidade
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.venda.valorTotal)
+        </th>
+        <th>
+            Promoção
+        </th>
+
+        <th>
+            Ganhe
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.venda.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.venda.produto.nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.venda.qtd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.venda.valorTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.promocaoVenda.descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ganhe)
+            </td>
+        </tr>
+    }
+</table>
+
+
+

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<SW_Ecommerce.Models.Produto>
+
+@{
+    ViewBag.Title = "SW-E-Commerce";
+}
+
+<h2>SW-E-Commerce, soluções rápidas</h2>
+
+<h2>Cadestre o produto e faça sua venda !</h2>
+<br />
+<h4>Produtos</h4>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.preco)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.preco)
+            </td>
+        </tr>
+    }
+</table>
+

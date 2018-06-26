@@ -1,0 +1,68 @@
+﻿@model IEnumerable<SW_Ecommerce.Models.Promocao>
+@{
+    ViewBag.Title = "Promocao Lista";
+}
+
+<h2>PromocaoLista</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar Promoção", "Promocao")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            Id Promoção
+        </th>
+        <th>
+            Descrição
+        </th>
+        <th>
+            Produto
+        </th>
+        <th>
+            Compre x
+        </th>
+        <th>
+            Leve x
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.produto.nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.comprex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.levex)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "DeletePromocao", new { id = item.id })
+            </td>
+            @*<td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>*@
+        </tr>
+    }
+
+    <tr>
+        <th>
+            @Html.ActionLink("Voltar para vendas", "Venda")
+        </th>
+    </tr>
+
+</table>
+

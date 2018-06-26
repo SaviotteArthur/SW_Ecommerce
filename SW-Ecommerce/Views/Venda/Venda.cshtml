@@ -1,0 +1,67 @@
+﻿@model IEnumerable<SW_Ecommerce.Models.Venda>
+@{
+    ViewBag.Title = "Venda";
+}
+
+<h2>Venda</h2>
+
+<h3>Cadastrar Venda </h3>
+
+<p>
+    @Html.ActionLink("Cadastrar Venda", "Cadastro")
+</p>
+
+<p>
+    @Html.ActionLink("Cadastrar Promoção", "Promocao")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            Id Venda
+        </th>
+        <th>
+            Nome Produto
+        </th>
+        <th>
+            Quantidade
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.valorTotal)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.produto.nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.qtd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.valorTotal)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "DeleteVenda", new { id = item.id })
+            </td>
+            @*<td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>*@
+        </tr>
+    }
+
+    <tr>
+        <th>
+            @Html.ActionLink("Finalizar compra", "Final")
+        </th>
+    </tr>
+
+</table>
