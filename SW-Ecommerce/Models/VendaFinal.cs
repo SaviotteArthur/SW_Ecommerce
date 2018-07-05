@@ -9,8 +9,10 @@ namespace SW_Ecommerce.Models
     {
         public Venda venda { get; set; }
 
-        public Promocao promocaoVenda { get; set; }
+        public double ValorTotal { get; set; }
 
-        public int ganhe { get; set; }
+        public int Qtd { get; set; }
+
+        public string Promocao { get; set; }
     }
 }

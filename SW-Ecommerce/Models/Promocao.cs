@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace SW_Ecommerce.Models
 {
-    public class Promocao
+    public abstract class Promocao
     {
-        public int id { get; set; }
-        public string descricao { get; set; }
-        public Produto produto { get;set; }
+        public string desc { get; set; }
+        public abstract double aplicaPromocao(Produto p, int quantidade);
 
-        public int comprex { get; set; }
-        public int levex { get; set; }
+        public Promocao(string descricao) { this.desc = descricao; }
     }
 }

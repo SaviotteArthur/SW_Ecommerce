@@ -168,6 +168,7 @@
     <Content Include="Views\Venda\Final.cshtml" />
     <Content Include="Views\Venda\Promocao.cshtml" />
     <Content Include="Views\Venda\PromocaoLista.cshtml" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -206,8 +207,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="meuContexto.cs" />
-    <Compile Include="Models\Produto.cs" />
+    <Compile Include="Models\ProdutoPromocao.cs" />
     <Compile Include="Models\Promocao.cs" />
+    <Compile Include="Models\Produto.cs" />
+    <Compile Include="Models\LeveDoisPagueUm.cs" />
     <Compile Include="Models\Venda.cs" />
     <Compile Include="Models\VendaFinal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -46,16 +46,27 @@ namespace SW_Ecommerce.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,nome,preco")] Produto produto)
+        public ActionResult Create(FormCollection form)
         {
+            string nome = form["nome"];
+            string precostring = form["preco"];
+            int id = db.Produtoes.Count() + 1;
+
+            double preco = double.Parse(precostring.Replace('.', ','));
+
+            Produto p = new Produto();
+            p.id = id;
+            p.nome = nome;
+            p.preco = preco;
+
             if (ModelState.IsValid)
             {
-                db.Produtoes.Add(produto);
+                db.Produtoes.Add(p);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(produto);
+            return View(p);
         }
 
         // GET: Produto/Edit/5

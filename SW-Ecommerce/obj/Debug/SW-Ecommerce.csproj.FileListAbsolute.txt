@@ -54,3 +54,4 @@ C:\Users\arthur.saviotte\Documents\SW e-commerce\SW-Ecommerce\SW-Ecommerce\bin\S
 C:\Users\arthur.saviotte\Documents\SW e-commerce\SW-Ecommerce\SW-Ecommerce\bin\System.Web.WebPages.xml
 C:\Users\arthur.saviotte\Documents\SW e-commerce\SW-Ecommerce\SW-Ecommerce\bin\System.Web.WebPages.Deployment.xml
 C:\Users\arthur.saviotte\Documents\SW e-commerce\SW-Ecommerce\SW-Ecommerce\bin\System.Web.WebPages.Razor.xml
+C:\Users\arthur.saviotte\Documents\SW e-commerce\SW-Ecommerce\SW-Ecommerce\obj\Debug\SW-Ecommerce.csprojResolveAssemblyReference.cache

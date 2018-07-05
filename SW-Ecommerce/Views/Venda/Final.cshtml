@@ -19,14 +19,10 @@
             Quantidade
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.venda.valorTotal)
+            Valor
         </th>
         <th>
             Promoção
-        </th>
-
-        <th>
-            Ganhe
         </th>
 
         <th></th>
@@ -42,16 +38,13 @@
                 @Html.DisplayFor(modelItem => item.venda.produto.nome)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.venda.qtd)
+                @Html.DisplayFor(modelItem => item.Qtd)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.venda.valorTotal)
+                @Html.DisplayFor(modelItem => item.ValorTotal)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.promocaoVenda.descricao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ganhe)
+                @Html.DisplayFor(modelItem => item.Promocao)
             </td>
         </tr>
     }

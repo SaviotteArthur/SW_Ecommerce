@@ -12,7 +12,9 @@ namespace SW_Ecommerce.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View(db.Produtoes.ToList());
+            //return View(db.Produtoes.ToList());
+            ViewBag.ValorValida = false;
+            return View();
         }
     }
 }
